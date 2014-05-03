@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Tab</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/newtab.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/newtab.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="cell">
+                <div id="container"></div>
+            </div>
+        </div>
+        <div id="apps"></div>
+    </body>
+</html>
+
+<script type="text/template" id="cardTemplate">
+<div class="card" id="{0}" data-reloadthumb="{2}">
+    <a href="{1}">
+        <div class="stretchy-wrapper">
+            <div class="thumb" style="background-image:url({4})">
+                <div class="shield"></div>
+                <img src="chrome://favicon/{1}" class="favicon"  alt="{3}" />
+            </div>
+        </div>
+        <h3>{3}</h3>
+    </a>
+</div>
+</script>
+
+<script type="text/template" id="appTemplate">
+<span class="app" id="{0}">
+    <img src="{1}" />
+</span>
+</script>

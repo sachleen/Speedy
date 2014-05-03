@@ -1,0 +1,153 @@
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 14px;
+    background-color:#eee;
+    height: 100%;
+}
+
+#wrapper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+
+#cell {
+    display:table-cell;
+    vertical-align:middle;
+    height: 100%;
+}
+
+#container {
+	width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    color: #797478;
+	width: 23%;
+    text-align: center;
+	margin: 0 1% 25px 1%;
+	float: left;
+}
+
+h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 20px;
+}
+
+.thumb {
+    border-radius: 3px;
+    background-size: cover;
+    background-position: top center;
+    border: 1px solid #DEDEDE;
+    position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+    
+    overflow: hidden;
+    -webkit-transition: all 150ms ease-in;
+    width: 100%;
+}
+
+/* Stretchy wrapper based on http://stackoverflow.com/a/10441480/219118 */
+.stretchy-wrapper {
+	width: 100%;
+	padding-bottom: 56.25%; /* 16:9 */
+	position: relative;
+}
+
+.shield {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0),
+                                        rgba(255, 255, 255, 0) 50%,
+                                        rgba(255, 255, 255, 0.9));
+    border-radius: 3px;
+    -webkit-transition: all 150ms ease-in;
+}
+
+.favicon {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    border-radius:3px;
+}
+
+.card a, .card a:visited {
+    color: #bbb;
+    text-decoration: none;
+    height: 132px;
+    -webkit-transition: all 150ms ease-in;
+}
+
+.card:hover a {
+    color: #333;
+    -webkit-transition: all 150ms ease-out;
+}
+
+.card:hover .thumb {
+    border: 1px solid #969696;
+    -webkit-transition: all 150ms ease-out;
+}
+
+.card:hover .shield {
+    background: -webkit-linear-gradient(rgba(150, 150, 150, 0.1),
+                                        rgba(255, 255, 255, 0.0) 50%,
+                                        rgba(255, 255, 255, 0.9));
+    -webkit-transition: all 150ms ease-out;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* App icons */
+#apps {
+    background-color:transparent;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+    height: 0px;
+    padding-top: 70px;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: all 150ms ease-in;
+    border-top: 1px transparent;
+}
+
+#apps:hover {
+    height: 70px;
+    overflow: hidden;
+    padding-top: 0;
+    -webkit-transition: all 150ms ease-out;
+    background-color: #ddd;
+    border-top: 1px solid #ccc;
+}
+
+.app {
+    cursor: pointer;
+}
+
+.app img {
+    height: 64px;
+}
+
+/*@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){
+	.card {width: 31.3333%;}
+}
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+	.card {width: 48%;}
+}*/
